@@ -234,7 +234,7 @@ public class OrderIntegrationTest {
     void test_order_withCreditCardPaymentAndInvalidPin_returnErrorMessage() throws Exception {
         Gson gson = new Gson();
         OrderRequest orderRequest = generateOrderRequest(1,3,PaymentType.CREDIT_CARD,new ArrayList<Money>() {{
-            add(Money.builder().moneyType(MoneyType.BANK_NOTE).amount(1).value(25.0).build());
+            add(Money.builder().moneyType(MoneyType.BANK_NOTE).amount(1).value(50.0).build());
         }});
         orderRequest.setCreditCardPin(123123213);
 
@@ -272,7 +272,7 @@ public class OrderIntegrationTest {
         assertTrue(optionalProduct.isPresent());
         int expectedProductAmount = optionalProduct.get().getAmount() - productAmountWillBeBought;
         OrderRequest orderRequest = generateOrderRequest(productIdWillBeBought,productAmountWillBeBought,PaymentType.CASH,new ArrayList<Money>() {{
-            add(Money.builder().moneyType(MoneyType.BANK_NOTE).amount(1).value(25.0).build());
+            add(Money.builder().moneyType(MoneyType.BANK_NOTE).amount(1).value(50.0).build());
         }});
         Inventory inventory = inventoryService.findById(1).orElse(null);
         assertNotNull(inventory);
