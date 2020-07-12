@@ -8,6 +8,8 @@ For database you can visit this path
 
 http://localhost:8080/h2-console
 
+JDBC URL : jdbc:h2:mem:testdb
+
 username : oktay
 pass : 1234
 
