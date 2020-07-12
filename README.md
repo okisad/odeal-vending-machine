@@ -4,6 +4,13 @@ http://localhost:8080/swagger-ui.html
 
 The REST API examples of app
 
+For database you can visit this path
+
+http://localhost:8080/h2-console
+
+username : oktay
+pass : 1234
+
 ## Get Inventory Info
 
 ### Request
